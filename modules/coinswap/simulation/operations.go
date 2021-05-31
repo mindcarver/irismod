@@ -246,7 +246,7 @@ func SimulateMsgSwapOrder(k keeper.Keeper, ak types.AccountKeeper, bk types.Bank
 			inputCoin, outputCoin = singleSwapSellOrder(inputCoin, outputCoin, ctx, k)
 		}
 		deadline := randDeadline(r)
-		//deadline := int64(time.Now().Add(time.Second * time.Duration(r.Intn(10))).Second())
+
 		msg := types.NewMsgSwapOrder(
 			types.Input{
 				Address: simAccount.Address.String(),
